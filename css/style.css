@@ -9,6 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/*navbar*/
 header {
   position: fixed;
   width: 100%;
@@ -46,6 +47,8 @@ a {
   color: #fff;
   text-decoration: none;
 }
+/*end*/
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -56,6 +59,7 @@ a {
   clear: both;
 }
 
+/*sidebar*/
 .mobile-menu {
   float: right;
   display: none;
@@ -97,16 +101,16 @@ i .fas,
 #check:checked ~ .sidebar {
   left: 0;
 }
+/*end*/
+
+/*banner*/
 .banner {
   height: 430px;
   background-image: url("bg7.jpg");
-  background-position-y: 10000px;
   background-size: cover;
   padding: 150px 0;
 }
-section {
-  padding: 50px 0;
-}
+
 .banner img {
   width: 100px;
   border-radius: 50%;
@@ -129,6 +133,13 @@ section {
   padding-top: 70px;
   padding-left: 24px;
 }
+/*end*/
+
+/*judul*/
+section {
+  padding: 50px 0;
+}
+
 section h3 {
   padding-bottom: 20px;
   text-align: center;
@@ -155,12 +166,18 @@ section h3::after {
   background-color: #242424;
   left: calc(50% - 20px);
 }
+/*end*/
+
+/*about*/
 #about p {
   text-align: justify;
   text-indent: 30px;
   line-height: 25px;
   margin-bottom: 15px;
 }
+/*end*/
+
+/*skill*/
 #skills,
 #contact {
   background-color: #f9f9f9;
@@ -191,7 +208,9 @@ section h3::after {
 .js {
   width: 5%;
 }
+/*end*/
 
+/*project*/
 .container-project {
   display: flex;
   flex-direction: row;
@@ -230,7 +249,9 @@ section h3::after {
   border-bottom: 1px solid #ddd;
   margin-bottom: 15px;
 }
+/*end*/
 
+/*contact*/
 .container-contact {
   margin: auto;
   border-radius: 5px;
@@ -308,7 +329,9 @@ i,
   padding: 10px;
   color: #000000;
 }
+/*end*/
 
+/*footer*/
 footer {
   background-color: #333;
   padding: 50px;
@@ -317,7 +340,9 @@ footer {
 footer small {
   color: #fff;
 }
+/*end*/
 
+/*responsive*/
 @media (max-width: 768px) {
   .mobile-menu {
     display: block;
@@ -337,3 +362,4 @@ footer small {
     width: 100%;
   }
 }
+/*end*/
