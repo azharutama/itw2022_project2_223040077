@@ -78,12 +78,12 @@
         <h3>About</h3>
         <p>
          Nama saya muhammad azhar utama saya merupakan seorang mahasiawa teknik informatika di suatu universitas swasta yaitu universitas pasundan, 
-         saya lahir pada tanggal 18 januari 2004 di bogor dan memiliki zodiak capricorn, saya memiliki hobi bermain game bsik itu dari game pc maupun mobile,
+         saya lahir pada tanggal 18 januari 2004 di bogor dan memiliki zodiak capricorn, saya memiliki hobi bermain game bAik itu dari game pc maupun mobile,
 
         </p>
         <p>
           alasan saya masuk jurusan teknik informatika adalah karena saya sangat senang melihat suatu codingan dan tertarik untuk membuatnya, selain ketertarikan saya terhadap codingan
-          saya juga merasa cocok dengan pelajaran pelajaran yang diajarkan di jurusan saya, dan itu membuat saya ingin lebih mendalami ilmu programming khususnya dibidang web.
+          saya juga merasa cocok dengan pelajaran pelajaran yang diajarkan di jurusan saya, dan itu membuat saya ingin lebih mendalami ilmu programming khususnya dibidang web.</p>
       </div>
     </section>
      <!--end--->
@@ -194,7 +194,7 @@
     <div class="container-contact">
       <h2>kirim pesan</h2>
       <div class="border"></div>
-      <form>
+      <form name="WPU-Contact-Form">
         <div>
           <input
             type="text"
@@ -216,14 +216,14 @@
         <div>
           <input
             type="text"
-            name="no telpon"
+            name="telpon"
             required=""
             placeholder="nomor telpon"
           />
         </div>
 
         <div>
-          <textarea required placeholder="pesan"></textarea>
+          <textarea required placeholder="pesan" name="pesan"></textarea>
         </div>
 
         <div>
@@ -267,5 +267,17 @@
     <script>
       AOS.init();
     </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwlgj5CaETkH5doQZPY3lGAQMrt3BZ9dj-32J4ErVZdlsxTU8VhpWgVQsbgs4mBS09E/exec'
+  const form = document.forms['WPU-Contact-Form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
   </body>
 </html>

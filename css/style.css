@@ -79,7 +79,7 @@ i .fas,
 }
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 70px;
   bottom: 0;
   left: -300px;
   width: 300px;
@@ -211,13 +211,16 @@ section h3::after {
 /*end*/
 
 /*project*/
+
 .container-project {
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: space-between;
   margin: auto;
+  align-items: center;
 }
 
 .col-4 {
@@ -344,6 +347,9 @@ footer small {
 
 /*responsive*/
 @media (max-width: 768px) {
+  .container-project {
+    padding-left: 80px;
+  }
   .mobile-menu {
     display: block;
   }
